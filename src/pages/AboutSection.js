@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import myphoto from "../images/myphoto.jpeg";
+import { useMediaQuery } from "@material-ui/core";
 
 const AboutContainer = styled.section`
   display: flex;
@@ -11,6 +12,8 @@ const AboutContainer = styled.section`
 `;
 
 const AboutSection = () => {
+  const isSmallScreen = useMediaQuery("(max-width: 768px)"); // Adjust the breakpoint as needed
+
   return (
     <AboutContainer id="aboutsection">
       <div className="site-container">
@@ -19,7 +22,7 @@ const AboutSection = () => {
         </div>
         <div className="aboutproject">
           <h2>About me:</h2>
-          <text style={{ fontSize: 20 }}>
+          <text style={{ fontSize: isSmallScreen ? 16 : 20 }}>
             I'm Akomas Ifeanyi (AI), a passionate and innovative software
             developer with a proven track record of creating impactful mobile
             device applications and websites across a diverse range of
