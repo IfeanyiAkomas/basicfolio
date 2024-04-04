@@ -10,13 +10,27 @@ import express from "../images/expresslogo.png";
 import firebase from "../images/firebaselogo.png";
 import git from "../images/gitlogo.png";
 import mongoDB from "../images/mongodblogo.jpeg";
+import xcode from "../images/xcode.jpeg";
+import androidstudio from "../images/androidstudio.jpeg";
 import node from "../images/nodelogo.png";
 import netlify from "../images/netlify.png";
+import vercel from "../images/vercel.png";
 import react from "../images/reactlogo.svg";
 
 const TechnologiesContainer = styled.section`
-  padding: 40px 0;
-`;
+padding: 40px;
+justify-content: center;
+align-items: center;
+text-align: center;
+background-image: radial-gradient(
+  circle at bottom right,
+  indigo,
+  white,
+  white,
+  white
+);
+  `;
+  
 
 const TechnologyCardContainer = styled.div`
   display: flex;
@@ -59,7 +73,7 @@ const TechnologiesSection = () => {
   // Media query for larger screens (e.g., desktops)
   const largeScreenSettings = {
     ...settings,
-    slidesToShow: 4, // Adjust the number of slides to show for larger screens
+    slidesToShow: 7, // Adjust the number of slides to show for larger screens
   };
 
   const technologies = [
@@ -67,6 +81,18 @@ const TechnologiesSection = () => {
       id: 1,
       title: "AWS Amplify",
       image: amplify,
+      width: "100px",
+    },
+    {
+      id: 11,
+      title: "X Code",
+      image: xcode,
+      width: "100px",
+    },
+    {
+      id: 32,
+      title: "Android Studio",
+      image: androidstudio,
       width: "100px",
     },
     {
@@ -88,27 +114,33 @@ const TechnologiesSection = () => {
       width: "100px",
     },
     {
-      id: 5,
+      id: 25,
       title: "Node",
       image: node,
       width: "100px",
     },
     {
-      id: 6,
+      id: 16,
       title: "React Native",
       image: react,
       width: "120px",
     },
     {
-      id: 7,
+      id: 22,
       title: "React",
       image: react,
       width: "120px",
     },
     {
-      id: 7,
+      id: 53,
       title: "Netlify",
       image: netlify,
+      width: "120px",
+    },
+    {
+      id: 71,
+      title: "Vercel",
+      image: vercel,
       width: "120px",
     },
     {
@@ -126,7 +158,7 @@ const TechnologiesSection = () => {
   ];
 
   return (
-    <TechnologiesContainer id="technologies">
+    <TechnologiesContainer id="technologies" className="tech">
       <h2 style={{ textAlign: "center", marginBottom: "30px", fontSize: 30 }}>
         Work Technologies
       </h2>
@@ -141,9 +173,9 @@ const TechnologiesSection = () => {
                     <img
                       src={`${technology.image}`}
                       alt="technology"
-                      style={{ width: '70px' }}
-                      />
-                      <TechnologyTitle>{technology.title}</TechnologyTitle>
+                      style={{ width: "70px" }}
+                    />
+                    <TechnologyTitle>{technology.title}</TechnologyTitle>
                   </div>
                 </TechnologyCard>
               </TechnologyCardContainer>
@@ -160,8 +192,8 @@ const TechnologiesSection = () => {
                       src={`${technology.image}`}
                       alt="technology"
                       style={{ width: technology.width }}
-                      />
-                      <TechnologyTitle>{technology.title}</TechnologyTitle>
+                    />
+                    <TechnologyTitle>{technology.title}</TechnologyTitle>
                   </div>
                 </TechnologyCard>
               </TechnologyCardContainer>

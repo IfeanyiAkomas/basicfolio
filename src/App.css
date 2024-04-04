@@ -214,10 +214,10 @@ body {
 
 .technology-card {
   background-color: #fff;
-  border-radius: 15px;
+  border-radius: 25px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  width: 200px;
+  width: 150px;
   height: 200px;
   justify-content: center;
   align-items: center;
@@ -320,6 +320,71 @@ body {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
+}
+
+.about-img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.footer {
+  background-color: #f8f9fa;
+  padding: 40px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+.footer-column h3 {
+  color: #fff; /* Changed text color to white */
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #fff; /* Changed link color to white */
+  text-decoration: none;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icons a {
+  color: #fff; /* Changed icon color to white */
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  color: #fff; /* Changed text color to white */
 }
 
 /* Media Queries for Responsive Design */
@@ -461,7 +526,6 @@ body {
     border-bottom-style: solid;
     background-image: linear-gradient(to bottom right, black, black, indigo);
     border-bottom-color: linear-gradient(to bottom right, black, black, indigo);
-
   }
 
   .hero-section {
@@ -578,7 +642,7 @@ body {
 
   .technology-card {
     background-color: #fff;
-    border-radius: 15px;
+    border-radius: 25px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     width: 150px;
@@ -594,6 +658,13 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 20px;
+  }
+
+  .about-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
   }
 }

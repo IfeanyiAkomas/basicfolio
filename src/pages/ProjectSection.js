@@ -15,6 +15,9 @@ import errandzz from "../images/errandzz.png";
 
 const ProjectsContainer = styled.section`
   padding: 40px 0;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 `;
 
 const ProjectContainer = styled.div`
@@ -49,8 +52,8 @@ const ProjectsSection = () => {
 
   return (
     <ProjectsContainer id="projects">
-      <h2 style={{ textAlign: "center", marginBottom: "30px", fontSize: 30 }}>
-        Projects I've Worked On
+      <h2 style={{ textAlign: "center", marginBottom: "30px", fontSize: 30, }}>
+        Some Interesting Projects
       </h2>
       <h3 style={{ textAlign: "center", marginBottom: "10px", fontSize: 20 }}>
         Hospiyou Healthcare App
@@ -115,7 +118,7 @@ const HospiyouProject = () => {
   // Media query for larger screens (e.g., desktops)
   const largeScreenSettings = {
     ...settings,
-    slidesToShow: 4, // Adjust the number of slides to show for larger screens
+    slidesToShow: 5, // Adjust the number of slides to show for larger screens
   };
 
   const projects = [
@@ -147,8 +150,8 @@ const HospiyouProject = () => {
       id: 5,
       title: "Cloud Database",
       image: clouddb,
-      width: "200px",
-      height: "150px",
+      width: "250px",
+      height: "120px",
     },
     {
       id: 6,
@@ -177,7 +180,7 @@ const HospiyouProject = () => {
                   <img
                     src={`${project.image}`}
                     alt="project"
-                    style={{ width: project.width, height: project?.height }}
+                    style={{ width: project.width, height: project?.height, alignSelf: 'center' }}
                   />
                 </div>
               </ProjectCard>

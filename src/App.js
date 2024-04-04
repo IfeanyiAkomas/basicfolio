@@ -12,6 +12,8 @@ import gear from "./images/gear.gif";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Modal } from "@material-ui/core";
+import AboutSection from "./pages/AboutSection";
+import FooterSection from "./pages/FooterSection";
 
 const AppWrapper = styled.div`
   overflow-x: hidden;
@@ -28,12 +30,12 @@ const HeroDescription = styled.p`
   margin: 10px auto 30px;
 `;
 
-const Footer = styled.footer`
-background-image: linear-gradient(to bottom right, black, black, indigo);
-color: #fff;
-  padding: 20px;
-  text-align: center;
-`;
+// const Footer = styled.footer`
+//   background-image: linear-gradient(to bottom right, black, black, indigo);
+//   color: #fff;
+//   padding: 20px;
+//   text-align: center;
+// `;
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,10 +54,9 @@ const App = () => {
         <div className="header">
           <text className="name">AI</text>
           <div className="nav">
-            <a href="#about">About</a>
+            <a href="#aboutsection">About</a>
             <a href="#services">Services</a>
             <a href="#technologies">Technologies</a>
-            {/* <a href="#reviews">Reviews</a> */}
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
             <button className="menu-icon" onClick={openModal}>
@@ -78,7 +79,7 @@ const App = () => {
               >
                 X
               </button>
-              <a className="modal-text" href="#about" onClick={closeModal}>
+              <a className="modal-text" href="#aboutsection" onClick={closeModal}>
                 About
               </a>
               <a className="modal-text" href="#services" onClick={closeModal}>
@@ -119,8 +120,8 @@ const App = () => {
       <TechnologiesSection />
       {/* <ReviewsSection /> */}
       <ProjectsSection />
-
-      <Footer>© 2024 Ifeanyi Akomas | Web & Mobile App Developer</Footer>
+      <AboutSection />
+      <FooterSection />
     </AppWrapper>
   );
 };
