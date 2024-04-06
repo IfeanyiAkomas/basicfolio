@@ -132,7 +132,7 @@ const App = () => {
       </div>
       <Quote
         quote={
-          "Welcome👋 With great pleasure I'd love to transform your vision into reality. With dedication and expertise, I'm here to craft solutions that exceed your expectations and propel your success. Let's embark on this journey together!"
+          "Welcome👋 I'd love to transform your vision into reality. With dedication and expertise, I'm here to craft solutions that exceed your expectations and propel your success. Let's embark on this journey together!"
         }
       />
       <ServicesSection />
