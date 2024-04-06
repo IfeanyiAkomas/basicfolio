@@ -5,7 +5,7 @@ import { useMediaQuery } from "@material-ui/core";
 
 import facetime from "../images/facetime.jpg";
 import AIDiagnosis from "../images/AIDiagnosis.png";
-import payment from "../images/payment.gif";
+import payment from "../images/wallet.jpeg";
 import appointment from "../images/appointment.png";
 import reviews from "../images/rating.webp";
 import maps from "../images/maps.jpeg";
@@ -13,6 +13,7 @@ import clouddb from "../images/clouddb.png";
 import hospiyouweb from "../images/hospiyouweb.jpeg";
 import errandzz from "../images/errandzz.jpeg";
 import frontend from "../images/frontend.gif";
+import luvleen from "../images/luvleen.jpeg";
 
 const ProjectsContainer = styled.section`
   padding: 40px 0;
@@ -101,9 +102,21 @@ const ProjectsSection = () => {
 
       <div className="website">
         <h2 style={{ textAlign: "center", marginBottom: "10px", fontSize: 25 }}>
-        Diamond Save Software
+          Diamond Save Software
         </h2>
         <DiamondSoftware />
+        <div className="btn-container">
+          <button className="btn" onClick={visitSite}>
+            {/* View website */}
+          </button>
+        </div>
+      </div>
+
+      <div className="website">
+        <h2 style={{ textAlign: "center", marginBottom: "10px", fontSize: 25 }}>
+          Luvleen Social App
+        </h2>
+        <LuvleenApp />
         <div className="btn-container">
           <button className="btn" onClick={visitSite}>
             {/* View website */}
@@ -298,6 +311,23 @@ const DiamondSoftware = () => {
   );
 };
 
+const LuvleenApp = () => {
+  return (
+    <div className="site-container">
+      <div>
+        <img src={luvleen} className="webimage" alt="errandzzimage" />
+      </div>
+      <div className="aboutproject">
+        <h2>About Luvleen:</h2>
+        <text>
+          Luvleen creates an environment where users can communicate with one
+          another, meet life partners, make new friends, etc hence discarding the barrier of distance
+        </text>
+      </div>
+    </div>
+  );
+};
+
 const OtherApps = () => {
   return (
     <div className="site-container">
@@ -306,16 +336,16 @@ const OtherApps = () => {
       </div>
       <div className="aboutproject">
         <h2>Some Others:</h2>
-        <div style={{marginBottom: "10px"}}>
+        <div style={{ marginBottom: "10px" }}>
           <text>Video Calling Server: Video calling software</text>
         </div>
-        <div style={{marginBottom: "10px"}}>
+        <div style={{ marginBottom: "10px" }}>
           <text>Luvleen Social App: Social networking app</text>
         </div>
-        <div style={{marginBottom: "10px"}}>
+        <div style={{ marginBottom: "10px" }}>
           <text>HibridEx App: Buying and selling of digital currencies</text>
         </div>
-        <div style={{marginBottom: "10px"}}>
+        <div style={{ marginBottom: "10px" }}>
           <text>
             PDF Converter: Converts pdf to audiobooks using python scripts
           </text>
