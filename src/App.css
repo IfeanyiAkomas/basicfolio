@@ -165,6 +165,10 @@ body {
   margin: 100px;
 }
 
+.technology-text {
+  margin: 0px 100px;
+}
+
 .site-container {
   display: flex;
   flex-direction: row;
@@ -628,6 +632,10 @@ body {
 
   .website {
     margin-top : 30px;
+  }
+
+  .technology-text {
+    margin-top: 30px;
   }
 
   .site-container {

@@ -18,7 +18,7 @@ import vercel from "../images/vercel.png";
 import react from "../images/reactlogo.svg";
 
 const TechnologiesContainer = styled.section`
-  padding: 40px;
+  margin: 60px 0;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -154,6 +154,14 @@ const TechnologiesSection = () => {
         <h2 style={{ textAlign: "center", marginBottom: "30px", fontSize: 30 }}>
           Work Technologies
         </h2>
+        <div style={{backgroundColor: 'black', padding: '20px'}}>
+
+          <text style={{color: 'white'}}>
+            AWS Amplify, X Code, Android Studio, Firebase, Open AI, Git, Node,
+            HTML, CSS, Tailwind, JavaScript, React Native, React, Netlify,
+            Vercel, MongoDB, Express, etc
+          </text>
+        </div>
         {isSmallScreen ? (
           <Slider {...smallScreenSettings}>
             <div></div>
@@ -195,13 +203,6 @@ const TechnologiesSection = () => {
           </Slider>
         )}
       </TechnologiesContainer>
-      <div className="site-container">
-        <text>
-          AWS Amplify, X Code, Android Studio, Firebase, Open AI, Git, Node,
-          HTML, CSS, Tailwind, JavaScript, React Native, React, Netlify, Vercel,
-          MongoDB, Express, etc
-        </text>
-      </div>
     </>
   );
 };
