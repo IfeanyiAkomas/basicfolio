@@ -137,62 +137,72 @@ const TechnologiesSection = () => {
       title: "MongoDB",
       image: mongoDB,
       width: "120px",
-      imgwdt: "60px"
+      imgwdt: "60px",
     },
     {
       id: 9,
       title: "Express",
       image: express,
       width: "120px",
-      imgwdt: "70px"
+      imgwdt: "70px",
     },
   ];
 
   return (
-    <TechnologiesContainer id="technologies">
-      <h2 style={{ textAlign: "center", marginBottom: "30px", fontSize: 30 }}>
-        Work Technologies
-      </h2>
-      {/* <div className="slide-container"> */}
-      {isSmallScreen ? (
-        <Slider {...smallScreenSettings}>
-          <div></div>
-          {technologies.map((technology) => (
-            <TechnologyCardContainer>
-              <TechnologyCard className="technology-card">
-                <div key={technology.id} className="technology-card-content">
-                  <img
-                    src={`${technology.image}`}
-                    alt="technology"
-                    style={{ width: technology?.imgwdt || "40px", alignSelf: "center" }}
-                  />
-                  <h5>{technology.title}</h5>
-                </div>
-              </TechnologyCard>
-            </TechnologyCardContainer>
-          ))}
-        </Slider>
-      ) : (
-        <Slider {...largeScreenSettings}>
-          <div></div>
-          {technologies.map((technology) => (
-            <TechnologyCardContainer>
-              <TechnologyCard className="technology-card">
-                <div key={technology.id} className="technology-card-content">
-                  <img
-                    src={`${technology.image}`}
-                    alt="technology"
-                    style={{ width: technology.width, alignSelf: "center" }}
-                  />
-                  <TechnologyTitle>{technology.title}</TechnologyTitle>
-                </div>
-              </TechnologyCard>
-            </TechnologyCardContainer>
-          ))}
-        </Slider>
-      )}
-      {/* </div> */}
-    </TechnologiesContainer>
+    <>
+      <TechnologiesContainer id="technologies">
+        <h2 style={{ textAlign: "center", marginBottom: "30px", fontSize: 30 }}>
+          Work Technologies
+        </h2>
+        {isSmallScreen ? (
+          <Slider {...smallScreenSettings}>
+            <div></div>
+            {technologies.map((technology) => (
+              <TechnologyCardContainer>
+                <TechnologyCard className="technology-card">
+                  <div key={technology.id} className="technology-card-content">
+                    <img
+                      src={`${technology.image}`}
+                      alt="technology"
+                      style={{
+                        width: technology?.imgwdt || "40px",
+                        alignSelf: "center",
+                      }}
+                    />
+                    <h5>{technology.title}</h5>
+                  </div>
+                </TechnologyCard>
+              </TechnologyCardContainer>
+            ))}
+          </Slider>
+        ) : (
+          <Slider {...largeScreenSettings}>
+            <div></div>
+            {technologies.map((technology) => (
+              <TechnologyCardContainer>
+                <TechnologyCard className="technology-card">
+                  <div key={technology.id} className="technology-card-content">
+                    <img
+                      src={`${technology.image}`}
+                      alt="technology"
+                      style={{ width: technology.width, alignSelf: "center" }}
+                    />
+                    <TechnologyTitle>{technology.title}</TechnologyTitle>
+                  </div>
+                </TechnologyCard>
+              </TechnologyCardContainer>
+            ))}
+          </Slider>
+        )}
+      </TechnologiesContainer>
+      <div className="site-container">
+        <text>
+          AWS Amplify, X Code, Android Studio, Firebase, Open AI, Git, Node,
+          HTML, CSS, Tailwind, JavaScript, React Native, React, Netlify, Vercel,
+          MongoDB, Express, etc
+        </text>
+      </div>
+    </>
   );
 };
 
