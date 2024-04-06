@@ -340,9 +340,6 @@ const OtherApps = () => {
           <text>Video Calling Server: Video calling software</text>
         </div>
         <div style={{ marginBottom: "10px" }}>
-          <text>Luvleen Social App: Social networking app</text>
-        </div>
-        <div style={{ marginBottom: "10px" }}>
           <text>HibridEx App: Buying and selling of digital currencies</text>
         </div>
         <div style={{ marginBottom: "10px" }}>
