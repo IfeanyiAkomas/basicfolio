@@ -79,7 +79,7 @@ const App = () => {
             <div className="modal-container">
               <button
                 style={{
-                  fontSize: 30,
+                  fontSize: 25,
                   backgroundColor: "black",
                   color: "white",
                   border: "none",
@@ -130,21 +130,25 @@ const App = () => {
           </div>
         </div>
       </div>
-      <Quote
+      <Quote quote={"If you never want to be forgotten: do something worth writing about, or write something worth reading. ~ Benjamin Franklin"} />
+
+      {/* <Quote
         quote={
           "Welcome👋 I'd love to transform your vision into reality. With dedication and expertise, I'm here to craft solutions that exceed your expectations and propel your success. Let's embark on this journey together!"
         }
-      />
+      /> */}
       <ServicesSection />
       <QuickAction />
       <TechnologiesSection />
       <Quote
         quote={
-          "Two years of practical application in building meaningful products surpasses two decades of understanding several technologies right?"
+          "Two years of practical 'hands on' experience in building meaningful products surpasses two decades of understanding several technologies doesn't it?"
         }
       />
       <ProjectsSection />
       <AboutSection />
+      <Quote quote={"You can create the next world class product by taking the first step to contact me"} />
+      <QuickAction />
       <FooterSection />
       <button
         style={{
@@ -154,12 +158,12 @@ const App = () => {
           border: "none",
           backgroundColor: "#fff",
           boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-          padding: "10px",
+          padding: "13px",
           borderRadius: "50%",
         }}
         onClick={handlePhoneLinkClick}
       >
-        <FaPhone color="indigo" size={30} />
+        <FaPhone color="indigo" size={23} />
       </button>
       <button
         style={{

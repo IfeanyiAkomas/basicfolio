@@ -1,5 +1,7 @@
 import React from "react";
 import { FaWhatsapp } from "react-icons/fa";
+
+
 const QuickAction = () => {
   const handlePhoneLinkClick = () => {
     window.location.href = `tel:${+2347037432078}`;
@@ -10,7 +12,7 @@ const QuickAction = () => {
       <div className="site-container">
         <h2>Contact me urgently</h2>
         <a
-          style={{ display: "flex", justifyContent: "center", color: "indigo" }}
+          style={{ display: "flex", justifyContent: "center", color: "indigo", textDecoration: 'none', padding: "10px", border: "1px solid", borderRadius: "10px" }}
           href="https://wa.me/+2347037432078"
           target="_blank"
           rel="noopener noreferrer"
@@ -20,9 +22,9 @@ const QuickAction = () => {
         <a
           href={`tel:${+2347037432078}`}
           onClick={handlePhoneLinkClick}
-          style={{ color: "indigo" }}
+          style={{ color: "indigo", textDecoration: 'none', padding: "10px", margin: "5px", border: "1px solid", borderRadius: "10px" }}
         >
-          Call on phone {+2347037432078}
+          Call me {+2347037432078}
         </a>
       </div>
     </div>

@@ -184,7 +184,6 @@ const HospiyouProject = () => {
       image: clouddb,
       width: "200px",
       height: "300px",
-      mobheight: "200px",
     },
     {
       id: 6,
@@ -215,9 +214,6 @@ const HospiyouProject = () => {
                     alt="project"
                     style={{
                       width: project.width,
-                      height: project?.mobheight,
-                      alignSelf: "center",
-                      justifyContent: "center",
                     }}
                   />
                 </div>

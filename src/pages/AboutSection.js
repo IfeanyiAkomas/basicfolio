@@ -28,7 +28,6 @@ const AboutSection = () => {
             <text
               style={{
                 fontSize: isSmallScreen ? 16 : 20,
-                fontFamily: "monospace",
               }}
             >
               Hi! I'm Akomas Ifeanyi (AI), a passionate and innovative software
