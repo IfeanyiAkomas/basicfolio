@@ -47,6 +47,9 @@ const ProjectsSection = () => {
   };
 
   const visitSite = () => {
+  };
+
+  const hospiyouSite = () => {
     window.location.href = "https://hospiyou.com";
   };
 
@@ -82,7 +85,7 @@ const ProjectsSection = () => {
         </h2>
         <HospiyouSite />
         <div className="btn-container">
-          <button className="btn" onClick={visitSite}>
+          <button className="btn" onClick={hospiyouSite}>
             View website
           </button>
         </div>
