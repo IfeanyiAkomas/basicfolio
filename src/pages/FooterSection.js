@@ -10,7 +10,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer" id="contact">
       <div className="container">
         <div className="footer-content">
           <div className="footer-column">
@@ -25,9 +25,9 @@ const Footer = () => {
               <li>
                 <a href="#services">Services</a>
               </li>
-              <li>
+              {/* <li>
                 <a href="#contact">Contact</a>
-              </li>
+              </li> */}
             </ul>
           </div>
           <div className="footer-column">

@@ -14,6 +14,9 @@ import "slick-carousel/slick/slick-theme.css";
 import { Modal } from "@material-ui/core";
 import AboutSection from "./pages/AboutSection";
 import FooterSection from "./pages/FooterSection";
+import Quote from "./pages/components/Quote";
+import QuickAction from "./pages/components/QuickAction";
+import { FaPhone, FaWhatsapp } from "react-icons/fa";
 
 const AppWrapper = styled.div`
   overflow-x: hidden;
@@ -48,6 +51,13 @@ const App = () => {
     setIsOpen(false);
   };
 
+  const handlePhoneLinkClick = () => {
+    window.location.href = `tel:${+2347037432078}`;
+  };
+  const handleWhatsApp = () => {
+    window.location.href = `${'https://wa.me/+2347037432078'}`;
+  };
+
   return (
     <AppWrapper>
       <div id="about" className="hero-section">
@@ -79,7 +89,11 @@ const App = () => {
               >
                 X
               </button>
-              <a className="modal-text" href="#aboutsection" onClick={closeModal}>
+              <a
+                className="modal-text"
+                href="#aboutsection"
+                onClick={closeModal}
+              >
                 About
               </a>
               <a className="modal-text" href="#services" onClick={closeModal}>
@@ -111,17 +125,59 @@ const App = () => {
             </HeroTitle>
             <HeroDescription className="hero-description">
               Let me help you get your ideas out to the world before someone
-              else steals it!
+              else patents it!
             </HeroDescription>
           </div>
         </div>
       </div>
+      <Quote
+        quote={
+          "Welcome👋 With great pleasure I'd love to transform your vision into reality. With dedication and expertise, I'm here to craft solutions that exceed your expectations and propel your success. Let's embark on this journey together!"
+        }
+      />
       <ServicesSection />
+      <QuickAction />
       <TechnologiesSection />
-      {/* <ReviewsSection /> */}
+      <Quote
+        quote={
+          "Two years of practical application in building meaningful products surpasses two decades of understanding several technologies right?"
+        }
+      />
       <ProjectsSection />
       <AboutSection />
       <FooterSection />
+      <button
+        style={{
+          position: "fixed",
+          bottom: "20px",
+          right: "20px",
+          border: "none",
+          backgroundColor: "#fff",
+          boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+          padding: "10px",
+          borderRadius: "50%",
+        }}
+        onClick={handlePhoneLinkClick}
+      >
+        <FaPhone color="indigo" size={30} />
+      </button>
+      <button
+        style={{
+          position: "fixed",
+          bottom: "90px",
+          right: "20px",
+          border: "none",
+          backgroundColor: "#fff",
+          boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+          padding: "10px",
+          borderRadius: "50%",
+        }}
+        onClick={handleWhatsApp}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FaWhatsapp color="indigo" size={30} />
+      </button>
     </AppWrapper>
   );
 };

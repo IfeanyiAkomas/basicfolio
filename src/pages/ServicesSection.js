@@ -20,7 +20,6 @@ const ServicesCardContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px;
 `;
 
 
@@ -139,9 +138,9 @@ const ServicesSection = () => {
       </h2>
       <div className="services-container">
         {services.map((service, index) => (
-          <ServicesCardContainer>
+          <ServicesCardContainer className="service-card">
             <ServiceCard key={index}>
-              <ServiceCardContent className="service-card">
+              <ServiceCardContent>
                 <ServiceTitle>{service.title}</ServiceTitle>
                 <ServiceDescription>{service.description}</ServiceDescription>
                 <img

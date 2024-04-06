@@ -11,7 +11,8 @@ import reviews from "../images/rating.webp";
 import maps from "../images/maps.jpeg";
 import clouddb from "../images/clouddb.png";
 import hospiyouweb from "../images/hospiyouweb.jpeg";
-import errandzz from "../images/errandzz.png";
+import errandzz from "../images/errandzz.jpeg";
+import frontend from "../images/frontend.gif";
 
 const ProjectsContainer = styled.section`
   padding: 40px 0;
@@ -48,29 +49,36 @@ const ProjectsSection = () => {
     window.location.href = "https://hospiyou.com";
   };
 
-  const visitAppleStore = () => {};
+  // const visitAppleStore = () => {};
 
   return (
     <ProjectsContainer id="projects">
-      <h2 style={{ textAlign: "center", marginBottom: "30px", fontSize: 30, }}>
+      <h2
+        style={{
+          textAlign: "center",
+          marginBottom: "30px",
+          fontSize: 30,
+          padding: "30px",
+        }}
+      >
         Some Interesting Projects
       </h2>
-      <h3 style={{ textAlign: "center", marginBottom: "10px", fontSize: 20 }}>
+      <h2 style={{ textAlign: "center", marginBottom: "10px", fontSize: 25 }}>
         Hospiyou Healthcare App
-      </h3>
+      </h2>
       <HospiyouProject />
       <div className="btn-container">
         <button className="btn" onClick={visitPlayStore}>
-          View on Play Store
+          Download Android
         </button>
-        <button className="btn" onClick={visitAppleStore}>
-          View on Apple Store
-        </button>
+        {/* <button className="btn" onClick={visitAppleStore}>
+          Download iOS
+        </button> */}
       </div>
       <div className="website">
-        <h3 style={{ textAlign: "center", marginBottom: "10px", fontSize: 20 }}>
+        <h2 style={{ textAlign: "center", marginBottom: "10px", fontSize: 25 }}>
           Hospiyou Website
-        </h3>
+        </h2>
         <HospiyouSite />
         <div className="btn-container">
           <button className="btn" onClick={visitSite}>
@@ -78,12 +86,36 @@ const ProjectsSection = () => {
           </button>
         </div>
       </div>
-      
+
       <div className="website">
-        <h3 style={{ textAlign: "center", marginBottom: "10px", fontSize: 20 }}>
-         Errandzz Logistics App
-        </h3>
+        <h2 style={{ textAlign: "center", marginBottom: "10px", fontSize: 25 }}>
+          Errandzz Logistics App
+        </h2>
         <ErrandzzProject />
+        <div className="btn-container">
+          <button className="btn" onClick={visitSite}>
+            {/* View website */}
+          </button>
+        </div>
+      </div>
+
+      <div className="website">
+        <h2 style={{ textAlign: "center", marginBottom: "10px", fontSize: 25 }}>
+        Diamond Save Software
+        </h2>
+        <DiamondSoftware />
+        <div className="btn-container">
+          <button className="btn" onClick={visitSite}>
+            {/* View website */}
+          </button>
+        </div>
+      </div>
+
+      <div className="website">
+        <h2 style={{ textAlign: "center", marginBottom: "10px", fontSize: 25 }}>
+          Some Other Projects
+        </h2>
+        <OtherApps />
         <div className="btn-container">
           <button className="btn" onClick={visitSite}>
             {/* View website */}
@@ -150,8 +182,9 @@ const HospiyouProject = () => {
       id: 5,
       title: "Cloud Database",
       image: clouddb,
-      width: "250px",
-      height: "120px",
+      width: "200px",
+      height: "300px",
+      mobheight: "200px",
     },
     {
       id: 6,
@@ -180,7 +213,12 @@ const HospiyouProject = () => {
                   <img
                     src={`${project.image}`}
                     alt="project"
-                    style={{ width: project.width, height: project?.height, alignSelf: 'center' }}
+                    style={{
+                      width: project.width,
+                      height: project?.mobheight,
+                      alignSelf: "center",
+                      justifyContent: "center",
+                    }}
                   />
                 </div>
               </ProjectCard>
@@ -198,7 +236,7 @@ const HospiyouProject = () => {
                   <img
                     src={`${project.image}`}
                     alt="project"
-                    style={{ width: project.width }}
+                    style={{ width: project.width, height: project?.height }}
                   />
                 </div>
               </ProjectCard>
@@ -219,7 +257,12 @@ const HospiyouSite = () => {
       </div>
       <div className="aboutproject">
         <h2>About Hospiyou:</h2>
-        <text>Hospiyou is an AI-Powered Telemedical corporation that enables patients connect with doctors through video call, chat system, etc. It also provides AI-diagnostic test for patients to do a self examination of their current medical status before connecting them to doctors</text>
+        <text>
+          Hospiyou is an AI-Powered Telemedical corporation that enables
+          patients connect with doctors through video call, chat system, etc. It
+          also provides AI-diagnostic test for patients to do a self examination
+          of their current medical status before connecting them to doctors
+        </text>
       </div>
     </div>
   );
@@ -233,7 +276,59 @@ const ErrandzzProject = () => {
       </div>
       <div className="aboutproject">
         <h2>About Errandzz:</h2>
-        <text>Errandzz is a logistics app that connects clients with randers in order to get their goods delivered to a location of choice.</text>
+        <text>
+          Errandzz is a logistics app that connects clients with randers in
+          order to get their goods delivered to a location of choice.
+        </text>
+      </div>
+    </div>
+  );
+};
+
+const DiamondSoftware = () => {
+  return (
+    <div className="site-container">
+      <div>
+        <img src={payment} className="webimage" alt="errandzzimage" />
+      </div>
+      <div className="aboutproject">
+        <h2>About Diamond Save:</h2>
+        <text>
+          This software program was designed to help it's users save money and
+          track their expenses.
+        </text>
+      </div>
+    </div>
+  );
+};
+
+const OtherApps = () => {
+  return (
+    <div className="site-container">
+      <div>
+        <img src={frontend} className="otherapps" alt="otherapps" />
+      </div>
+      <div className="aboutproject">
+        <h2>Some Others:</h2>
+        <div style={{marginBottom: "10px"}}>
+          <text>Video Calling Server: Video calling software</text>
+        </div>
+        <div style={{marginBottom: "10px"}}>
+          <text>Luvleen Social App: Social networking app</text>
+        </div>
+        <div style={{marginBottom: "10px"}}>
+          <text>HibridEx App: Buying and selling of digital currencies</text>
+        </div>
+        <div style={{marginBottom: "10px"}}>
+          <text>
+            PDF Converter: Converts pdf to audiobooks using python scripts
+          </text>
+        </div>
+        {/* <div>
+          <text>
+            PDF Converter: Converts pdf to audiobooks uaing python scripts
+          </text>
+        </div> */}
       </div>
     </div>
   );

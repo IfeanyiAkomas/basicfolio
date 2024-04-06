@@ -173,7 +173,7 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   width: 80vw;
-  height: 500px;
+  /* height: 500px; */
   padding: 20px;
   margin: 20px;
   align-items: center;
@@ -385,6 +385,12 @@ body {
   text-align: center;
   margin-top: 30px;
   color: #fff; /* Changed text color to white */
+} 
+
+.otherapps {
+  width: 300px;
+  height: 300px;
+
 }
 
 /* Media Queries for Responsive Design */
@@ -538,7 +544,7 @@ body {
     border-bottom-right-radius: 50px;
     padding: 10px;
     position: relative;
-    height: 100vh;
+    height: 98vh;
   }
 
   .below-nav {
@@ -570,6 +576,10 @@ body {
 
   .main-content {
     padding: 10px;
+  }
+
+  .service-card {
+    width: 100vw;
   }
 
   .project-card {
@@ -617,7 +627,7 @@ body {
   }
 
   .website {
-    margin: 0;
+    margin-top : 100px;
   }
 
   .site-container {
